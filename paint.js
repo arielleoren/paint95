@@ -3,27 +3,28 @@ var height = prompt("how tall should the canvas be?")
 $(".canvas").css("width", width);
 $(".canvas").css("height", height);
 $canvas = $(".canvas")
-console.log($canvas)
 var currentColor = "black";
 var currentWidth = "10px";
 var currentHeight = "10px";
 var currentBorderRadius = "0%";
-var draw = function (e) {
+var isDrawing = false;
 
-    if (isDrawing === true) {
-        let posX = event.clientX  
-        let posY = e.clientY
-        console.log(posX, posY)
-        var $paint = $('<span class="new"></span>')
-        $paint.css("background-color", currentColor);
-        $paint.css("width", currentWidth)
-        $paint.css("height", currentHeight)
-        $paint.css("left", posX)
-        $paint.css("top", posY)
-        $paint.css("position", "absolute")
-        $paint.css("border-radius", currentBorderRadius);
-        $canvas.append($paint)
+var draw = function (e) {
+    if (!isDrawing) {
+        return ;
     }
+
+    let posX = event.clientX  
+    let posY = e.clientY
+    var $paint = $('<span class="new"></span>')
+    $paint.css("background-color", currentColor);
+    $paint.css("width", currentWidth)
+    $paint.css("height", currentHeight)
+    $paint.css("left", posX)
+    $paint.css("top", posY)
+    $paint.css("position", "absolute")
+    $paint.css("border-radius", currentBorderRadius);
+    $canvas.append($paint);
 }
 
 var color = document.getElementById("color");
@@ -80,7 +81,6 @@ function clearAll() {
     }
 }
 
-var isDrawing = false
 
 $(".canvas").on("mousedown", function () {
     isDrawing = true;
