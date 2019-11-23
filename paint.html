@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="paint.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container-canvas">
+            <div class="canvas" id="canvas"></div>
+        </div>
+
+        <div class="bar">
+            <div class="color" id="color">
+                <button class="black" id="black"></button>
+                <button class="blue" id="blue"></button>
+                <button class="green" id="green"></button>
+                <button class="yellow" id="yellow"></button>
+                <button class="pink" id="pink"></button>
+            </div>
+            <div class = "shape" id = "shape">
+                <button class="square" id="10px" target = "0%">square</button>
+                <button class="white" id ="white"> erase</button>
+                <button class="thin" id ="5px"> thin </button>
+            </div>
+            <div class = "shape" id = "shape">
+                <button class="circle" id="50%">circle </button>
+                <button class="clear" id="clear">clear all </button>
+            </div>
+        </div>
+    </div>
+
+
+            <script src="https://code.jquery.com/jquery-3.4.1.js"
+                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+            <script src="./paint.js"></script>
+
+</body>
+
+</html>
