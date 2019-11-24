@@ -14,8 +14,8 @@ var draw = function (e) {
         return ;
     }
 
-    let posX = event.clientX  
-    let posY = e.clientY
+    let posX = e.pageX  
+    let posY = e.pageY
     var $paint = $('<span class="new"></span>')
     $paint.css("background-color", currentColor);
     $paint.css("width", currentWidth)
